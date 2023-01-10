@@ -1,0 +1,25 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "Formulário desenvolvido em HTML e CSS.",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliaJPereira/Formulario-DEVs.git"
+  },
+  "keywords": [],
+  "author": "Alex Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuliaJPereira/Formulario-DEVs/issues"
+  },
+  "homepage": "https://github.com/JuliaJPereira/Formulario-DEVs#readme",
+  "devDependencies": {
+    "@visual-regression-tracker/agent-cypress": "^5.5.0",
+    "cypress": "^12.2.0"
+  }
+}

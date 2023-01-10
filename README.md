@@ -1,90 +1,43 @@
-# curso-cypress-percy
+# Testes _end-to-end_ com Cypress
 
-Repositório do curso básico de testes de regressão visual com Cypress e Percy da [Escola Talking About Testing](https://talkingabouttesting.coursify.me).
+Sample project to demonstrate end-to-end (e2e) tests written with Cypress running on a CI service.
 
-## Aula 1
+## Pre-requirements
 
-Setup inicial
+To run this project, you will need:
 
-<details>
-  <summary>Conteúdo da aula</summary>
-    <br>- Clone do projeto (git clone git@github.com:wlsf82/curso-cypress-percy.git)<br>
-    - Inicialização de um projeto Node.js (npm init -y)<br>
-    - Atuazação da licença (MIT), script de teste (percy exec -- cypress run), keywords (cypress, percy) e autor (nome, email e website)<br>
-    - Instalação do Cypress e Percy (npm i cypress @percy/cypress -D)<br>
-    - Inicialização do Cypress (npx cypress open) e sua estrutura de arquivos e diretórios<br>
-    - Atualização do arquivo .gitignore (cypress/screenshots/ e cypress/videos/)<br>
-    - Configurando o Percy para trabalhar em conjunto com o Cypress (https://docs.percy.io/docs/cypress)<br>
-    - Documentação oficial do Cypress (https://docs.cypress.io/guides/overview/why-cypress.html)<br>
-    - Documentação oficial do Percy (https://docs.percy.io/docs)
-</details>
+- [git](https://git-scm.com/downloads) (I've used version `2.25.1` while writing this doc)
+- [nodejs](https://nodejs.org/en/) (I've used version `16.18.1` while writing this doc)
+- NPM (I've used version `8.19.2` while writing this doc)
 
-## Aula 2
+**Note:** When installing nodejs, NPM is automatically installed too.
 
-[Percy.io](https://percy.io)
+## Installation
 
-<details>
-  <summary>Conteúdo da aula</summary>
-    <br>- Criando uma conta no percy.io<br>
-    - Criação do projeto<br>
-    - Exportação do project token
-</details>
+To install the dev dependencies, run `npm install` (or `npm i` for short.)
 
-## Aula 3
+## Configuring the environment variables
 
-Primeiro teste
+Before running the tests, some environment variables need to be set up.
 
-<details>
-  <summary>Conteúdo da aula</summary>
-    <br>- Conhecendo a aplicação em teste<br>
-    - Criação do primeiro teste de regressão visual com Cypress e Percy<br>
-    - Execuação do primeiro teste<br>
-    - Aprovação da snapshot no dashboard do Percy
-</details>
+Make a copy of the [`cypress.env.example.json`](./cypress.env.example.json) file as `cypress.env.json`, and set the appropriate values for all the variables.
 
-## Aula 4
+**Note:** `cypress.env.json` file is not tracked by git.
 
-Testando outras variações
+## Running the tests
 
-<details>
-  <summary>Conteúdo da aula</summary>
-    <br>- Criação do teste de preenchimento do formulário com um e-mail inválido<br>
-    - Criação do teste de preenchimento de todos os campos obrigatórios do formulário<br>
-    - Criação do teste de seleção de mais de um ticket VIP<br>
-    - Execuação dos novos teste<br>
-    - Aprovação das novas snapshots no dashboard do Percy
-</details>
+In this project, you can run tests in interactive and headless modes, and on desktop in model viewports.
 
-## Aula 5
+### Headless mode
 
-Testes com conteúdos dinâmicos
+Run `npm run test`  to run all tests in headless mode using a desktop viewport.
 
-<details>
-  <summary>Conteúdo da aula</summary>
-    <br>- O problema de conteúdos dinâmicos nos testes de regressão visual<br>
-    - Criação do teste para submissão do formulário com sucesso<br>
-    - Execução dos testes<br>
-    - Aprovação da nova snapshot no dashboard do Percy<br>
-    - Re-execução dos testes<br>
-    - Falso negativo<br>
-    - Lidando com elementos dinâmicos - https://docs.percy.io/docs/percy-specific-css<br>
-    - Re-execução dos testes<br>
-    - Aprovação da nova snapshot no dashboard do Percy<br>
-    - Re-execução dos testes sem resultados falsos negativos
-</details>
+**Note:** To run a specific test of a module check the corresponding script in the `package.json` file and run `npm run` script.
 
-## Aula 6
+### Interactive mode
 
-Fechamento
-
-<details>
-  <summary>Conteúdo da aula</summary>
-    <br>- Documentação do projeto (atualização do README.md)<br>
-    - Resumo do curso (instalação, configuração, dashboard do Percy, execução dos testes, aprovação de snapshots, e econteúdos dinâmicos)<br>
-    - Indo além (#ReadTheDocs)<br>
-    - Novos cursos... em breve!
-</details>
+Run `npx cypress open` to open the Cypress Test Runner to run tests in interactive mode using a desktop viewport.
 
 ___
 
-Um curso da [Escola Talking About Testing](https://talkingabouttesting.coursify.me).
+Made with ❤️ by [Alex Pereira](https://github.com/alexdesousapereira).
